@@ -2,14 +2,15 @@
 oversettTekst = () =>
  {
     for (var i = 0; i < skriveFelt.length; i++) {
-        var let = skriveFelt[i];
-        var x = tekstArray.indexOf(let);
-        var morseLet = morseArray[x];
-     this.oversettMorse += morseLet, 
-     + '';  
+        var lett = skriveFelt[i].toUpperCase();
+        // console.log(lett);
+        var x = tekstArray.indexOf(lett);
+        // console.log(x);
+        oversettMorse += morseArray[x];
+   
     }
  updateView();
 }
  settInTekst = () => {
-ovsersettMorse = document.getElementById('tekst-m').value; 
+skriveFelt = document.getElementById('txtData').value; 
 }
